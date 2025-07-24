@@ -62,7 +62,7 @@ public class KRepatingCharacterRemove {
             s.append(String.valueOf(pair.character).repeat(Math.max(0, pair.count)));
         }
 
-        System.out.println(s.toString());
+        System.out.println(s);
     }
 
 }

@@ -15,7 +15,7 @@ ignore case sensitivity
  */
 public class WordFrequencyCounter {
 
-    public static List<Map.Entry<String, Long>> frquencyCounter(String para, int limit){
+    public static List<Map.Entry<String, Long>> frequencyCounter(String para, int limit){
         return Arrays.stream(para.split(" "))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet().stream()
@@ -26,7 +26,7 @@ public class WordFrequencyCounter {
 
     public static void main(String[] args) {
         String s = "Java is great and Java is powerful and Java is popular";
-        for(Map.Entry<String, Long> entry : frquencyCounter(s, 2)){
+        for(Map.Entry<String, Long> entry : frequencyCounter(s, 2)){
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
 

@@ -24,6 +24,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/*
+Implement a system that filters and groups data based on multiple conditions using `Stream.filter()` and `Stream.collect()`.
+
+Requirements:
+
+Define a `Product` class with fields such as `id`, `name`, `category`, and `price`.
+Create a list of products.
+Filter the products to:
+Only include products with a price greater than a specific value.
+Only include products from certain categories.
+Group the filtered products by category using `Collectors.groupingBy()`.
+Aggregate the results within each category by computing the total price of all products in that category using `Collectors.summingDouble()`.
+Sort the products within each category by price in descending order.
+ */
+
 public class FilteringAndGrouping {
 
     public static Map<String, Double> sortedProducts(List<Product> products){

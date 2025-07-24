@@ -6,6 +6,13 @@ import org.example.utils.EmployeeProducer;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+/*
+Sort employees
+descending order of salaries
+age
+name
+give names
+ */
 
 public class EmployeeSorting {
 
