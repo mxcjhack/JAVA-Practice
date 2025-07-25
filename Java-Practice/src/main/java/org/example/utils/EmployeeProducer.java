@@ -1,5 +1,6 @@
 package org.example.utils;
 
+import org.example.models.Department;
 import org.example.models.Employee;
 
 import java.util.ArrayList;
@@ -22,5 +23,31 @@ public class EmployeeProducer {
         list.add(new Employee("Hank", 30, 70000));      // same age
 
         return list;
+    }
+
+    public static List<Department> generateDepartments() {
+        List<Employee> employees = generateEmployees();
+
+        List<Department> departments = new ArrayList<>();
+        List<Employee> engineering = new ArrayList<>();
+        List<Employee> sales = new ArrayList<>();
+        List<Employee> hr = new ArrayList<>();
+
+        for (int i = 0; i < employees.size(); i++) {
+            Employee e = employees.get(i);
+            if (i % 3 == 0) {
+                engineering.add(e);
+            } else if (i % 3 == 1) {
+                sales.add(e);
+            } else {
+                hr.add(e);
+            }
+        }
+
+        departments.add(new Department("Engineering", engineering));
+        departments.add(new Department("Sales", sales));
+        departments.add(new Department("HR", hr));
+
+        return departments;
     }
 }
